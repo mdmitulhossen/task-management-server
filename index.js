@@ -52,7 +52,7 @@ async function run() {
       }
     });
 
-    // all products items
+    // all tasks
     app.get("/tasks", async (req, res) => {
       const cursor = tasksCollection.find({});
       const result = await cursor.toArray();
