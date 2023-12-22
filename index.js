@@ -31,7 +31,7 @@ async function run() {
 
 
     // =======products========
-    //  Create a new product item
+    //  Create a new task
     app.post("/tasks", async (req, res) => {
       try {
         const tasks = req.body;
@@ -41,7 +41,7 @@ async function run() {
           description: tasks.description,
           finishDate: tasks.date,
           priority: tasks.priority,
-          status: tasks.status,
+          status: tasks.status || 'todo',
           createdAt: new Date(),
         };
         console.log(newTask)
