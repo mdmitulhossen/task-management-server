@@ -59,7 +59,7 @@ async function run() {
       res.send(result);
     });
 
-    // Get a single products item
+    // Get a single task 
     app.get("/tasks/:id", async (req, res) => {
       const id = req.params.id;
       if (id.length < 24) {
@@ -71,7 +71,7 @@ async function run() {
       res.send(product);
     });
 
-    // Delete a single products item
+    // Delete a single task
     app.delete("/tasks/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: new ObjectId(id) };
@@ -79,7 +79,7 @@ async function run() {
       res.send(result);
     });
 
-    // update a single products item
+    // update a single task
     app.put("/tasks/:id", async (req, res) => {
       const id = req.params.id;
       if (id.length < 24) {
